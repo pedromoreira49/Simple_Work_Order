@@ -64,5 +64,28 @@ namespace Simple_Work_Order
                 throw ex;
             }
         }
+
+        public static void Register(WorkOrders works)
+        {
+            try
+            {
+                using (var cmd = DBconnection().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO Works_Order(Client, Contact, WorkID, Equip, Work, Price, DateIn) value (@Client, @Contact, @WorkID, @Equip, @Work, @Price, @DateIn)";
+                    cmd.Parameters.AddWithValue("@Client", works.Client);
+                    cmd.Parameters.AddWithValue("@Contact", works.Contact);
+                    cmd.Parameters.AddWithValue("@WorkID", works.WorkID);
+                    cmd.Parameters.AddWithValue("@Equip", works.Equip);
+                    cmd.Parameters.AddWithValue("@Work", works.Work);
+                    cmd.Parameters.AddWithValue("@Price", works.Price);
+                    cmd.Parameters.AddWithValue("@DateIn", works.DateIn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
