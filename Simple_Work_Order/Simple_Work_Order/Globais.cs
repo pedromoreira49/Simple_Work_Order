@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Simple_Work_Order
 {
-    class Globais
+    public class Globais
     {
+        public static string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
+        public static string database = path + @"database\";
+        public static string workOrders = path + @"workorders\";
+        public static string images = path + @"images\";
     }
 }
