@@ -136,5 +136,27 @@ namespace Simple_Work_Order
                 return dt;
             }
         }
+
+        public static void UpdateDatas(WorkOrders works)
+        {
+            //var workId = FormUpdate.WorkID();
+            try
+            {
+                using(var cmd = DBconnection().CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Works_Order SET Client=@Client, Contact=@Contact, WorkID=@WorkID, Equip=@Equip, Work=@Work, Price=@Price WHERE WorkID = "; //+ WorkID;
+                    cmd.Parameters.AddWithValue("@Client", works.Client);
+                    cmd.Parameters.AddWithValue("@Contact", works.Contact);
+                    cmd.Parameters.AddWithValue("@WorkID", works.WorkID);
+                    cmd.Parameters.AddWithValue("@Equip", works.Equip);
+                    cmd.Parameters.AddWithValue("@Work", works.Work);
+                    cmd.Parameters.AddWithValue("@Price", works.Price);
+                    cmd.ExecuteNonQuery();
+                }
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
