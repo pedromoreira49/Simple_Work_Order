@@ -13,7 +13,7 @@ namespace Simple_Work_Order
         public string WorkID { get; set; }
         public string Equip { get; set; }
         public string Work { get; set; }
-        public string Price { get; set }
+        public string Price { get; set; }
 
     }
 }
