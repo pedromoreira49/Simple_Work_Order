@@ -13,6 +13,11 @@ namespace Simple_Work_Order
         private static SQLiteConnection sqlconnection;
         public static string database = Globais.database;
 
-        
+        private static SQLiteConnection DBconnection()
+        {
+            sqlconnection = new SQLiteConnection($"Data Source={database}\\WorksOrder.sqlite; Version=3;");
+            sqlconnection.Open();
+            return sqlconnection;
+        }
     }
 }
