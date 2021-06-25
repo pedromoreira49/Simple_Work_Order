@@ -44,5 +44,25 @@ namespace Simple_Work_Order
                 throw ex;
             }
         }
+
+        public static DataTable GetWorks()
+        {
+            SQLiteDataAdapter data = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using(var cmd = DBconnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Works_Order";
+                    data = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
+                    data.Fill(dt);
+                    return dt;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
