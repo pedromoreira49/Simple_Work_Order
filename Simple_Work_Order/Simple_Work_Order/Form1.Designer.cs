@@ -154,6 +154,7 @@ namespace Simple_Work_Order
             this.btn_Register.TabIndex = 33;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = false;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // txtBoxContact
             // 

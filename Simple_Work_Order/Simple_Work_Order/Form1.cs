@@ -80,6 +80,35 @@ namespace Simple_Work_Order
             }
         }
 
+        private void btn_Register_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+            if (!TextValid())
+            {
+                MessageBox.Show("Por favor, informe os campos necessários!");
+                txtBoxClient.Focus();
+                txtBoxContact.Focus();
+                txtBoxEquip.Focus();
+                txtBoxWorkID.Focus();
+            }else if(DatasValid()){
+                MessageBox.Show("O ID da Ordem de Serviço já foi Registrada!");
+                txtBoxWorkID.Focus();
+            }
+            else
+            {
+                WorkOrders works = new WorkOrders();
+                works.Client = txtBoxClient.Text.ToUpper();
+                works.Contact = txtBoxContact.Text.ToUpper();
+                works.Equip = txtBoxEquip.Text.ToUpper();
+                works.WorkID = txtBoxWorkID.Text;
+                works.Work = txtBoxWork.Text.ToUpper();
+                works.Price = txtBoxPrice.Text;
+                works.DateIn = DateTime.Now.ToString();
 
+                Database.Register(works);
+                ShowDatas();
+                Clear();
+            }
+        }
     }
 }
