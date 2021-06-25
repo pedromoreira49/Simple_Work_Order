@@ -28,5 +28,21 @@ namespace Simple_Work_Order
                 SQLiteConnection.CreateFile($@"{database}WorksOrder.sqlite");
             }
         }
+
+        public static void CreateTable()
+        {
+            try
+            {
+                using(var cmd = DBconnection().CreateCommand())
+                {
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS Works_Order(Client Varchar(100), Contact Varchar(100), WorkID Varchar(5), Equip Varchar(240), Work Varchar(240), Price Varchar(30), DateIn Varchar(100))";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

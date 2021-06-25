@@ -14,6 +14,7 @@ namespace Simple_Work_Order
         public string Equip { get; set; }
         public string Work { get; set; }
         public string Price { get; set; }
+        public string DateIn { get; set; }
 
     }
 }
