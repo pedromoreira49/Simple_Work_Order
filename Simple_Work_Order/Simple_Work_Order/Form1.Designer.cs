@@ -110,6 +110,7 @@ namespace Simple_Work_Order
             this.btn_Delete.Size = new System.Drawing.Size(61, 47);
             this.btn_Delete.TabIndex = 37;
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Update
             // 

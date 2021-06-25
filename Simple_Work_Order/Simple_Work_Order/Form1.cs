@@ -128,5 +128,14 @@ namespace Simple_Work_Order
                 dataGridWorksOrder.DataSource = dt;
             }
         }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            var WorkID = Interaction.InputBox("Informe o ID da Ordem de serviço que será deletada: ", "Deletar Ordem de Serviço");
+            if (!string.IsNullOrEmpty(WorkID))
+            {
+                Database.Delete(WorkID);
+            }
+        }
     }
 }
