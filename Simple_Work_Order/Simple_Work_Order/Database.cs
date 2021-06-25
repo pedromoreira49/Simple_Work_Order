@@ -21,6 +21,12 @@ namespace Simple_Work_Order
             return sqlconnection;
         }
 
-        
+        public static void CreateDatabase()
+        {
+            if (!File.Exists($"{database}WorksOrder.sqlite"))
+            {
+                SQLiteConnection.CreateFile($@"{database}WorksOrder.sqlite");
+            }
+        }
     }
 }
