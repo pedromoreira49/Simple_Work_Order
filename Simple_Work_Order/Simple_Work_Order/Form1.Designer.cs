@@ -30,36 +30,36 @@ namespace Simple_Work_Order
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.txtBoxValue = new System.Windows.Forms.MaskedTextBox();
+            this.txtBoxPrice = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxObservations = new System.Windows.Forms.TextBox();
-            this.bnt_Imprimir = new System.Windows.Forms.Button();
+            this.txtBoxWork = new System.Windows.Forms.TextBox();
+            this.bnt_Print = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_Cadastrar = new System.Windows.Forms.Button();
-            this.txtBoxContato = new System.Windows.Forms.MaskedTextBox();
-            this.txtBoxEquipamento = new System.Windows.Forms.TextBox();
+            this.btn_Register = new System.Windows.Forms.Button();
+            this.txtBoxContact = new System.Windows.Forms.MaskedTextBox();
+            this.txtBoxEquip = new System.Windows.Forms.TextBox();
             this.labelEquipamento = new System.Windows.Forms.Label();
             this.labelContato = new System.Windows.Forms.Label();
             this.labelOsNumber = new System.Windows.Forms.Label();
             this.labelCliente = new System.Windows.Forms.Label();
-            this.txtBoxOsNumber = new System.Windows.Forms.TextBox();
-            this.txtBoxCliente = new System.Windows.Forms.TextBox();
-            this.dataGridFservices = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridFservices)).BeginInit();
+            this.txtBoxWorkID = new System.Windows.Forms.TextBox();
+            this.txtBoxClient = new System.Windows.Forms.TextBox();
+            this.dataGridWorksOrder = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWorksOrder)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtBoxValue
+            // txtBoxPrice
             // 
-            this.txtBoxValue.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxValue.Location = new System.Drawing.Point(475, 90);
-            this.txtBoxValue.Mask = "R$00000,00";
-            this.txtBoxValue.Name = "txtBoxValue";
-            this.txtBoxValue.Size = new System.Drawing.Size(207, 29);
-            this.txtBoxValue.TabIndex = 42;
+            this.txtBoxPrice.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxPrice.Location = new System.Drawing.Point(475, 90);
+            this.txtBoxPrice.Mask = "R$00000,00";
+            this.txtBoxPrice.Name = "txtBoxPrice";
+            this.txtBoxPrice.Size = new System.Drawing.Size(207, 29);
+            this.txtBoxPrice.TabIndex = 42;
             // 
             // label1
             // 
@@ -67,9 +67,9 @@ namespace Simple_Work_Order
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(477, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 41;
-            this.label1.Text = "Orçamento:";
+            this.label1.Text = "Price:";
             // 
             // label2
             // 
@@ -77,28 +77,28 @@ namespace Simple_Work_Order
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(477, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 40;
-            this.label2.Text = "Observações:";
+            this.label2.Text = "Work:";
             // 
-            // txtBoxObservations
+            // txtBoxWork
             // 
-            this.txtBoxObservations.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxObservations.Location = new System.Drawing.Point(475, 31);
-            this.txtBoxObservations.Name = "txtBoxObservations";
-            this.txtBoxObservations.Size = new System.Drawing.Size(207, 29);
-            this.txtBoxObservations.TabIndex = 39;
+            this.txtBoxWork.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxWork.Location = new System.Drawing.Point(475, 31);
+            this.txtBoxWork.Name = "txtBoxWork";
+            this.txtBoxWork.Size = new System.Drawing.Size(207, 29);
+            this.txtBoxWork.TabIndex = 39;
             // 
-            // bnt_Imprimir
+            // bnt_Print
             // 
-            this.bnt_Imprimir.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bnt_Imprimir.ForeColor = System.Drawing.Color.Black;
-            this.bnt_Imprimir.Image = ((System.Drawing.Image)(resources.GetObject("bnt_Imprimir.Image")));
-            this.bnt_Imprimir.Location = new System.Drawing.Point(727, 71);
-            this.bnt_Imprimir.Name = "bnt_Imprimir";
-            this.bnt_Imprimir.Size = new System.Drawing.Size(61, 47);
-            this.bnt_Imprimir.TabIndex = 38;
-            this.bnt_Imprimir.UseVisualStyleBackColor = false;
+            this.bnt_Print.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bnt_Print.ForeColor = System.Drawing.Color.Black;
+            this.bnt_Print.Image = ((System.Drawing.Image)(resources.GetObject("bnt_Print.Image")));
+            this.bnt_Print.Location = new System.Drawing.Point(727, 71);
+            this.bnt_Print.Name = "bnt_Print";
+            this.bnt_Print.Size = new System.Drawing.Size(61, 47);
+            this.bnt_Print.TabIndex = 38;
+            this.bnt_Print.UseVisualStyleBackColor = false;
             // 
             // btn_Delete
             // 
@@ -119,7 +119,7 @@ namespace Simple_Work_Order
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(163, 47);
             this.btn_Update.TabIndex = 36;
-            this.btn_Update.Text = "Alterar Dados";
+            this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = false;
             // 
             // btn_Refresh
@@ -130,7 +130,7 @@ namespace Simple_Work_Order
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(163, 47);
             this.btn_Refresh.TabIndex = 35;
-            this.btn_Refresh.Text = "Atualizar dados";
+            this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             // 
             // btn_Search
@@ -141,36 +141,36 @@ namespace Simple_Work_Order
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(163, 47);
             this.btn_Search.TabIndex = 34;
-            this.btn_Search.Text = "Pesquisar";
+            this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             // 
-            // btn_Cadastrar
+            // btn_Register
             // 
-            this.btn_Cadastrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_Cadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Cadastrar.Location = new System.Drawing.Point(12, 134);
-            this.btn_Cadastrar.Name = "btn_Cadastrar";
-            this.btn_Cadastrar.Size = new System.Drawing.Size(163, 47);
-            this.btn_Cadastrar.TabIndex = 33;
-            this.btn_Cadastrar.Text = "Cadastrar";
-            this.btn_Cadastrar.UseVisualStyleBackColor = false;
+            this.btn_Register.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Register.ForeColor = System.Drawing.Color.Black;
+            this.btn_Register.Location = new System.Drawing.Point(12, 134);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(163, 47);
+            this.btn_Register.TabIndex = 33;
+            this.btn_Register.Text = "Register";
+            this.btn_Register.UseVisualStyleBackColor = false;
             // 
-            // txtBoxContato
+            // txtBoxContact
             // 
-            this.txtBoxContato.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxContato.Location = new System.Drawing.Point(246, 31);
-            this.txtBoxContato.Mask = "(00) 00000-0000";
-            this.txtBoxContato.Name = "txtBoxContato";
-            this.txtBoxContato.Size = new System.Drawing.Size(207, 29);
-            this.txtBoxContato.TabIndex = 32;
+            this.txtBoxContact.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxContact.Location = new System.Drawing.Point(246, 31);
+            this.txtBoxContact.Mask = "(00) 00000-0000";
+            this.txtBoxContact.Name = "txtBoxContact";
+            this.txtBoxContact.Size = new System.Drawing.Size(207, 29);
+            this.txtBoxContact.TabIndex = 32;
             // 
-            // txtBoxEquipamento
+            // txtBoxEquip
             // 
-            this.txtBoxEquipamento.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxEquipamento.Location = new System.Drawing.Point(248, 89);
-            this.txtBoxEquipamento.Name = "txtBoxEquipamento";
-            this.txtBoxEquipamento.Size = new System.Drawing.Size(205, 29);
-            this.txtBoxEquipamento.TabIndex = 31;
+            this.txtBoxEquip.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxEquip.Location = new System.Drawing.Point(248, 89);
+            this.txtBoxEquip.Name = "txtBoxEquip";
+            this.txtBoxEquip.Size = new System.Drawing.Size(205, 29);
+            this.txtBoxEquip.TabIndex = 31;
             // 
             // labelEquipamento
             // 
@@ -178,9 +178,9 @@ namespace Simple_Work_Order
             this.labelEquipamento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelEquipamento.Location = new System.Drawing.Point(246, 71);
             this.labelEquipamento.Name = "labelEquipamento";
-            this.labelEquipamento.Size = new System.Drawing.Size(87, 16);
+            this.labelEquipamento.Size = new System.Drawing.Size(48, 16);
             this.labelEquipamento.TabIndex = 30;
-            this.labelEquipamento.Text = "Equipamento:";
+            this.labelEquipamento.Text = "Equip: ";
             // 
             // labelContato
             // 
@@ -190,7 +190,7 @@ namespace Simple_Work_Order
             this.labelContato.Name = "labelContato";
             this.labelContato.Size = new System.Drawing.Size(56, 16);
             this.labelContato.TabIndex = 29;
-            this.labelContato.Text = "Contato:";
+            this.labelContato.Text = "Contact:";
             // 
             // labelOsNumber
             // 
@@ -198,9 +198,9 @@ namespace Simple_Work_Order
             this.labelOsNumber.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelOsNumber.Location = new System.Drawing.Point(14, 71);
             this.labelOsNumber.Name = "labelOsNumber";
-            this.labelOsNumber.Size = new System.Drawing.Size(114, 16);
+            this.labelOsNumber.Size = new System.Drawing.Size(58, 16);
             this.labelOsNumber.TabIndex = 28;
-            this.labelOsNumber.Text = "Ordem de Serviço:";
+            this.labelOsNumber.Text = "Work ID:";
             // 
             // labelCliente
             // 
@@ -208,72 +208,72 @@ namespace Simple_Work_Order
             this.labelCliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCliente.Location = new System.Drawing.Point(14, 13);
             this.labelCliente.Name = "labelCliente";
-            this.labelCliente.Size = new System.Drawing.Size(51, 16);
+            this.labelCliente.Size = new System.Drawing.Size(44, 16);
             this.labelCliente.TabIndex = 27;
-            this.labelCliente.Text = "Cliente:";
+            this.labelCliente.Text = "Client:";
             // 
-            // txtBoxOsNumber
+            // txtBoxWorkID
             // 
-            this.txtBoxOsNumber.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxOsNumber.Location = new System.Drawing.Point(14, 89);
-            this.txtBoxOsNumber.Name = "txtBoxOsNumber";
-            this.txtBoxOsNumber.Size = new System.Drawing.Size(205, 29);
-            this.txtBoxOsNumber.TabIndex = 26;
+            this.txtBoxWorkID.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxWorkID.Location = new System.Drawing.Point(14, 89);
+            this.txtBoxWorkID.Name = "txtBoxWorkID";
+            this.txtBoxWorkID.Size = new System.Drawing.Size(205, 29);
+            this.txtBoxWorkID.TabIndex = 26;
             // 
-            // txtBoxCliente
+            // txtBoxClient
             // 
-            this.txtBoxCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxCliente.Location = new System.Drawing.Point(12, 31);
-            this.txtBoxCliente.Name = "txtBoxCliente";
-            this.txtBoxCliente.Size = new System.Drawing.Size(207, 29);
-            this.txtBoxCliente.TabIndex = 25;
+            this.txtBoxClient.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxClient.Location = new System.Drawing.Point(12, 31);
+            this.txtBoxClient.Name = "txtBoxClient";
+            this.txtBoxClient.Size = new System.Drawing.Size(207, 29);
+            this.txtBoxClient.TabIndex = 25;
             // 
-            // dataGridFservices
+            // dataGridWorksOrder
             // 
-            this.dataGridFservices.AllowUserToAddRows = false;
-            this.dataGridFservices.AllowUserToDeleteRows = false;
-            this.dataGridFservices.AllowUserToResizeColumns = false;
-            this.dataGridFservices.AllowUserToResizeRows = false;
-            this.dataGridFservices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridFservices.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridFservices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFservices.Location = new System.Drawing.Point(12, 218);
-            this.dataGridFservices.Name = "dataGridFservices";
-            this.dataGridFservices.ReadOnly = true;
-            this.dataGridFservices.RowHeadersVisible = false;
-            this.dataGridFservices.RowTemplate.Height = 25;
-            this.dataGridFservices.Size = new System.Drawing.Size(776, 220);
-            this.dataGridFservices.TabIndex = 24;
+            this.dataGridWorksOrder.AllowUserToAddRows = false;
+            this.dataGridWorksOrder.AllowUserToDeleteRows = false;
+            this.dataGridWorksOrder.AllowUserToResizeColumns = false;
+            this.dataGridWorksOrder.AllowUserToResizeRows = false;
+            this.dataGridWorksOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridWorksOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridWorksOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridWorksOrder.Location = new System.Drawing.Point(12, 218);
+            this.dataGridWorksOrder.Name = "dataGridWorksOrder";
+            this.dataGridWorksOrder.ReadOnly = true;
+            this.dataGridWorksOrder.RowHeadersVisible = false;
+            this.dataGridWorksOrder.RowTemplate.Height = 25;
+            this.dataGridWorksOrder.Size = new System.Drawing.Size(776, 220);
+            this.dataGridWorksOrder.TabIndex = 24;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtBoxValue);
+            this.Controls.Add(this.txtBoxPrice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxObservations);
-            this.Controls.Add(this.bnt_Imprimir);
+            this.Controls.Add(this.txtBoxWork);
+            this.Controls.Add(this.bnt_Print);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_Search);
-            this.Controls.Add(this.btn_Cadastrar);
-            this.Controls.Add(this.txtBoxContato);
-            this.Controls.Add(this.txtBoxEquipamento);
+            this.Controls.Add(this.btn_Register);
+            this.Controls.Add(this.txtBoxContact);
+            this.Controls.Add(this.txtBoxEquip);
             this.Controls.Add(this.labelEquipamento);
             this.Controls.Add(this.labelContato);
             this.Controls.Add(this.labelOsNumber);
             this.Controls.Add(this.labelCliente);
-            this.Controls.Add(this.txtBoxOsNumber);
-            this.Controls.Add(this.txtBoxCliente);
-            this.Controls.Add(this.dataGridFservices);
+            this.Controls.Add(this.txtBoxWorkID);
+            this.Controls.Add(this.txtBoxClient);
+            this.Controls.Add(this.dataGridWorksOrder);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.Text = "Simple Work Order";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridFservices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWorksOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,25 +281,25 @@ namespace Simple_Work_Order
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox txtBoxValue;
+        private System.Windows.Forms.MaskedTextBox txtBoxPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoxObservations;
-        private System.Windows.Forms.Button bnt_Imprimir;
+        private System.Windows.Forms.TextBox txtBoxWork;
+        private System.Windows.Forms.Button bnt_Print;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.Button btn_Cadastrar;
-        private System.Windows.Forms.MaskedTextBox txtBoxContato;
-        private System.Windows.Forms.TextBox txtBoxEquipamento;
+        private System.Windows.Forms.Button btn_Register;
+        private System.Windows.Forms.MaskedTextBox txtBoxContact;
+        private System.Windows.Forms.TextBox txtBoxEquip;
         private System.Windows.Forms.Label labelEquipamento;
         private System.Windows.Forms.Label labelContato;
         private System.Windows.Forms.Label labelOsNumber;
         private System.Windows.Forms.Label labelCliente;
-        private System.Windows.Forms.TextBox txtBoxOsNumber;
-        private System.Windows.Forms.TextBox txtBoxCliente;
-        private System.Windows.Forms.DataGridView dataGridFservices;
+        private System.Windows.Forms.TextBox txtBoxWorkID;
+        private System.Windows.Forms.TextBox txtBoxClient;
+        private System.Windows.Forms.DataGridView dataGridWorksOrder;
     }
 }
 
