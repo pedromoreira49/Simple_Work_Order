@@ -42,5 +42,15 @@ namespace Simple_Work_Order
                 MessageBox.Show("Erro: "+ ex.Message);
             }
         }
+
+        private void Clear()
+        {
+            txtBoxClient.Clear();
+            txtBoxContact.Clear();
+            txtBoxEquip.Clear();
+            txtBoxPrice.Clear();
+            txtBoxWork.Clear();
+            txtBoxWorkID.Clear();
+        }
     }
 }
