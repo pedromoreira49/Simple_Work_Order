@@ -17,5 +17,17 @@ namespace Simple_Work_Order
             InitializeComponent();
         }
 
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                Database.CreateDatabase();
+                Database.CreateTable();
+                
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

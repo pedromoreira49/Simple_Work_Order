@@ -273,6 +273,7 @@ namespace Simple_Work_Order
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.Text = "Simple Work Order";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridWorksOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
