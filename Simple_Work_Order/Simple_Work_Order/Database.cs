@@ -107,7 +107,7 @@ namespace Simple_Work_Order
             DataTable dt = new DataTable();
             using (var cmd = DBconnection().CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM File_Services WHERE Cliente LIKE " + "'" + Client + "'";
+                cmd.CommandText = "SELECT * FROM Works_Order WHERE Cliente LIKE " + "'" + Client + "'";
                 da = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
                 da.Fill(dt);
                 return dt;
@@ -123,6 +123,18 @@ namespace Simple_Work_Order
             }
         }
 
-        
+        public static DataTable GetDatasByWorkID(string WorkID)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            using (var cmd = DBconnection().CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM Works_Order WHERE OsNumber = " + WorkID;
+                da = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
+                da.Fill(dt);
+                return dt;
+            }
+        }
     }
 }
