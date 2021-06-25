@@ -100,5 +100,18 @@ namespace Simple_Work_Order
                 return dt;
             }
         }
+
+        public static DataTable SearchDatas(string Client)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            using (var cmd = DBconnection().CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM File_Services WHERE Cliente LIKE " + "'" + Client + "'";
+                da = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
+                da.Fill(dt);
+                return dt;
+            }
+        }
     }
 }
