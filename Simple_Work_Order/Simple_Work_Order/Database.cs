@@ -113,5 +113,16 @@ namespace Simple_Work_Order
                 return dt;
             }
         }
+
+        public static void Delete(string WorkID)
+        {
+            using (var cmd = DBconnection().CreateCommand())
+            {
+                cmd.CommandText = "DELETE FROM Works_Order WHERE WorkID =  " + WorkID;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        
     }
 }
