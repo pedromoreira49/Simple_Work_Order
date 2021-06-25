@@ -23,10 +23,23 @@ namespace Simple_Work_Order
             {
                 Database.CreateDatabase();
                 Database.CreateTable();
-                
+                ShowDatas();
             }catch(Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void ShowDatas()
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                dataTable = Database.GetWorks();
+                dataGridWorksOrder.DataSource = dataTable;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro: "+ ex.Message);
             }
         }
     }
