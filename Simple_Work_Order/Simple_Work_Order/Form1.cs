@@ -64,5 +64,20 @@ namespace Simple_Work_Order
                 return true;
             }
         }
+
+        private bool DatasValid()
+        {
+            DataTable dt = new DataTable();
+            dt = Database.Validation(txtBoxWorkID.Text);
+            int result = dt.Rows.Count;
+            if(result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
