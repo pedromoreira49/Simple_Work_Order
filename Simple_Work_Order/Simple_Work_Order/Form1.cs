@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Simple_Work_Order
 {
@@ -108,6 +109,23 @@ namespace Simple_Work_Order
                 Database.Register(works);
                 ShowDatas();
                 Clear();
+            }
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            ShowDatas();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            var client = Interaction.InputBox("Informe o nome do Cliente:", "Pesquisar pelo nome do Cliente");
+
+            if (!string.IsNullOrEmpty(client))
+            {
+                dt = Database.SearchDatas(client);
+                dataGridWorksOrder.DataSource = dt;
             }
         }
     }

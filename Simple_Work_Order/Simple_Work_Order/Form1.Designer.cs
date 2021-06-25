@@ -132,6 +132,7 @@ namespace Simple_Work_Order
             this.btn_Refresh.TabIndex = 35;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // btn_Search
             // 
@@ -143,6 +144,7 @@ namespace Simple_Work_Order
             this.btn_Search.TabIndex = 34;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Register
             // 
