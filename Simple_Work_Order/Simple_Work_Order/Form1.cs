@@ -52,5 +52,17 @@ namespace Simple_Work_Order
             txtBoxWork.Clear();
             txtBoxWorkID.Clear();
         }
+
+        private bool TextValid()
+        {
+            if(txtBoxClient.Text == "" || txtBoxContact.Text == "" || txtBoxEquip.Text == "" || txtBoxWorkID.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
