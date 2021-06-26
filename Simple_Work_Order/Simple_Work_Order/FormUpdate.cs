@@ -50,11 +50,54 @@ namespace Simple_Work_Order
             int result = dt.Rows.Count;
             if (result > 0)
             {
-                return true;
+                var msgBox = MessageBox.Show("ID da ordem de serviço já em uso. Gostaria de manter esse ID?", "AVISO!");
+                if(msgBox == DialogResult.OK)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
             else
             {
                 return false;
+            }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_Confirm_Click(object sender, EventArgs e)
+        {
+            if (TextValid())
+            {
+                MessageBox.Show("Por favor, informe todos os campos necessários!");
+                txtBoxClient.Focus();
+                txtBoxContact.Focus();
+                txtBoxEquip.Focus();
+                txtBoxWorkID.Focus();
+            }else if (DatasValid())
+            {
+                MessageBox.Show("ID da ordem de serviço já cadastrado!");
+                txtBoxWorkID.Focus();
+            }
+            else
+            {
+                WorkOrders works = new WorkOrders();
+                works.Client = txtBoxClient.Text.ToUpper();
+                works.Contact = txtBoxContact.Text.ToUpper();
+                works.Equip = txtBoxEquip.Text.ToUpper();
+                works.WorkID = txtBoxWorkID.Text;
+                works.Work = txtBoxWork.Text.ToUpper();
+                works.Price = txtBoxPrice.Text;
+
+                Database.UpdateDatas(works);
+
+                Close();
             }
         }
     }

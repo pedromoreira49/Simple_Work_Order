@@ -165,6 +165,7 @@ namespace Simple_Work_Order
             this.btn_Cancel.TabIndex = 56;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Confirm
             // 
@@ -176,6 +177,7 @@ namespace Simple_Work_Order
             this.btn_Confirm.TabIndex = 55;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = false;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // FormUpdate
             // 
