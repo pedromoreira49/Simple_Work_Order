@@ -22,6 +22,7 @@ namespace Simple_Work_Order
         {
             try
             {
+                Globais.CreatePaths();
                 Database.CreateDatabase();
                 Database.CreateTable();
                 ShowDatas();

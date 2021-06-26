@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
-using iTextSharp;
+using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Simple_Work_Order
 {
@@ -19,7 +20,21 @@ namespace Simple_Work_Order
             var workID = Interaction.InputBox("Informe o ID da ordem de serviço: ", "Gerar Arquivo em PDF");
             var dt = Database.GetDatasByWorkID(workID);
 
+            Document doc = new Document(PageSize.A4);
+            doc.SetMargins(40, 40, 20, 20);
 
+            string id = workID;
+
+            string path = $@"{works}" + $"WorkOrder{id}.pdf";
+
+            if (!File.Exists(path))
+            {
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(path, FileMode.Create));
+
+                doc.Open();
+
+                string s_img_logo = $@"{slogo}";
+            }
         }
     }
 }
