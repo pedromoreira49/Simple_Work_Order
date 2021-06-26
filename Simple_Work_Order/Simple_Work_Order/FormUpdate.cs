@@ -30,5 +30,32 @@ namespace Simple_Work_Order
                 return null;
             }
         }
+
+        private bool TextValid()
+        {
+            if (txtBoxClient.Text == "" || txtBoxContact.Text == "" || txtBoxEquip.Text == "" || txtBoxWorkID.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool DatasValid()
+        {
+            DataTable dt = new DataTable();
+            dt = Database.Validation(txtBoxWorkID.Text);
+            int result = dt.Rows.Count;
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
