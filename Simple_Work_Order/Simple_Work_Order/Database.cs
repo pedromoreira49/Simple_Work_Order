@@ -139,12 +139,12 @@ namespace Simple_Work_Order
 
         public static void UpdateDatas(WorkOrders works)
         {
-            //var workId = FormUpdate.WorkID();
+            var workId = FormUpdate.WorkID();
             try
             {
                 using(var cmd = DBconnection().CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Works_Order SET Client=@Client, Contact=@Contact, WorkID=@WorkID, Equip=@Equip, Work=@Work, Price=@Price WHERE WorkID = "; //+ WorkID;
+                    cmd.CommandText = "UPDATE Works_Order SET Client=@Client, Contact=@Contact, WorkID=@WorkID, Equip=@Equip, Work=@Work, Price=@Price WHERE WorkID = " +  workId;
                     cmd.Parameters.AddWithValue("@Client", works.Client);
                     cmd.Parameters.AddWithValue("@Contact", works.Contact);
                     cmd.Parameters.AddWithValue("@WorkID", works.WorkID);
