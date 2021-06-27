@@ -8,7 +8,7 @@ As Dependências usadas para o desenvolvimento deste software foram:\
 
 ## Interface principal do sistema:
 
-![image](https://github.com/pedromoreira49/Simple_Work_Order/tree/main/Simple_Work_Order/Example.png)
+![image](/Example.png)
 
 Possui 6 botões e 6 campos:
 
@@ -29,7 +29,7 @@ Botão Print -> Gerar um arquivo PDF no diretório workorders\
 Botão Update -> Alterar dados do banco de dados. Este botão chamará um formulário com os mesmos campos listados anteriormente.\
 
 ## Interface do Formulário de Update:
-![image2](https://github.com/pedromoreira49/Simple_Work_Order/tree/main/Simple_Work_Order/Example2.png)
+![image2](/Example2.png)
 
 ## PDF
 
@@ -37,7 +37,7 @@ Após informar o ID da ordem de serviço para gerar o pdf, será mostrado uma ca
 
 ## Modelo da ordem de serviço:
 
-![image3](https://github.com/pedromoreira49/Simple_Work_Order/tree/main/Simple_Work_Order/Example3.png)
+![image3](/Example3.png)
 
 ## Logo
 
