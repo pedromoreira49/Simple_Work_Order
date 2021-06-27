@@ -99,6 +99,7 @@ namespace Simple_Work_Order
             this.bnt_Print.Size = new System.Drawing.Size(61, 47);
             this.bnt_Print.TabIndex = 38;
             this.bnt_Print.UseVisualStyleBackColor = false;
+            this.bnt_Print.Click += new System.EventHandler(this.bnt_Print_Click);
             // 
             // btn_Delete
             // 

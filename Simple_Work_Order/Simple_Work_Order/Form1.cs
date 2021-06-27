@@ -138,5 +138,11 @@ namespace Simple_Work_Order
                 Database.Delete(WorkID);
             }
         }
+
+        private void bnt_Print_Click(object sender, EventArgs e)
+        {
+            WorkOrders works = new WorkOrders();
+            PdfGenerator.Create(works);
+        }
     }
 }
