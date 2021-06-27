@@ -35,7 +35,7 @@ namespace Simple_Work_Order
             {
                 using(var cmd = DBconnection().CreateCommand())
                 {
-                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS Works_Order(Client Varchar(100), Contact Varchar(100), WorkID Varchar(5), Equip Varchar(240), Work Varchar(240), Price Varchar(30), DateIn Varchar(100))";
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS Works_Order(Client Varchar(100), Contact Varchar(100), WorkID Varchar(10), Equip Varchar(240), Work Varchar(240), Price Varchar(30), DateIn Varchar(100))";
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -71,7 +71,7 @@ namespace Simple_Work_Order
             {
                 using (var cmd = DBconnection().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Works_Order(Client, Contact, WorkID, Equip, Work, Price, DateIn) value (@Client, @Contact, @WorkID, @Equip, @Work, @Price, @DateIn)";
+                    cmd.CommandText = "INSERT INTO Works_Order(Client, Contact, WorkID, Equip, Work, Price, DateIn) values (@Client, @Contact, @WorkID, @Equip, @Work, @Price, @DateIn)";
                     cmd.Parameters.AddWithValue("@Client", works.Client);
                     cmd.Parameters.AddWithValue("@Contact", works.Contact);
                     cmd.Parameters.AddWithValue("@WorkID", works.WorkID);
@@ -94,7 +94,7 @@ namespace Simple_Work_Order
             DataTable dt = new DataTable();
             using (var cmd = DBconnection().CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM Works_Order WHERE WorkID = " + WorkID + "LIMIT 1";
+                cmd.CommandText = "SELECT * FROM Works_Order WHERE WorkID = " + WorkID + " LIMIT 1";
                 da = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
                 da.Fill(dt);
                 return dt;
@@ -107,7 +107,7 @@ namespace Simple_Work_Order
             DataTable dt = new DataTable();
             using (var cmd = DBconnection().CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM Works_Order WHERE Cliente LIKE " + "'" + Client + "'";
+                cmd.CommandText = "SELECT * FROM Works_Order WHERE Client LIKE " + "'" + Client + "'";
                 da = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
                 da.Fill(dt);
                 return dt;

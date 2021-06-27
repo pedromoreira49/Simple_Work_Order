@@ -144,5 +144,11 @@ namespace Simple_Work_Order
             WorkOrders works = new WorkOrders();
             PdfGenerator.Create(works);
         }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            FormUpdate formupdate = new FormUpdate();
+            formupdate.Show();
+        }
     }
 }
