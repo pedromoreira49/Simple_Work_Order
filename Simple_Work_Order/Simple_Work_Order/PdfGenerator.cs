@@ -35,7 +35,7 @@ namespace Simple_Work_Order
 
                 doc.Open();
 
-                string s_img_logo = $@"{slogo}sua-logo-aqui";
+                string s_img_logo = $@"{slogo}minha-logo.png";
                 Image img = Image.GetInstance(s_img_logo);
                 img.ScaleAbsolute(img);
                 img.Alignment = Element.ALIGN_CENTER;
