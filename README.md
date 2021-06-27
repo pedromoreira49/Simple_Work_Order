@@ -1,6 +1,6 @@
 # Simple Work Order
 
-O intuíto deste software foi automatizar tarefas do meu cotidiano trabalhando em uma empresa que faz uso de Orden de Serviços para organizar e identificar os serviços de seus devidos clientes.
+O intuíto deste software foi automatizar tarefas do meu cotidiano trabalhando em uma empresa que faz uso de Ordens de Serviços para organizar e identificar os serviços de seus devidos clientes.
 
 As Dependências usadas para o desenvolvimento deste software foram:\
 --Banco de dados Sqlite (System.Data.SQLite)\
