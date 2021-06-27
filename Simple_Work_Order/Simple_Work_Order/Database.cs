@@ -130,7 +130,7 @@ namespace Simple_Work_Order
 
             using (var cmd = DBconnection().CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM Works_Order WHERE OsNumber = " + WorkID;
+                cmd.CommandText = "SELECT * FROM Works_Order WHERE WorkID = " + WorkID;
                 da = new SQLiteDataAdapter(cmd.CommandText, DBconnection());
                 da.Fill(dt);
                 return dt;

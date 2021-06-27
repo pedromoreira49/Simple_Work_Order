@@ -9,25 +9,27 @@ namespace Simple_Work_Order
 {
     public class Globais
     {
-        public static string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
-        public static string database = path + @"database\";
-        public static string workOrders = path + @"workorders\";
+        public static string path = System.AppDomain.CurrentDomain.BaseDirectory;
+        public static string database = path +@"database\";
+        public static string workorders = path +@"WorkOrders\";
         public static string images = path + @"images\";
 
+        
         public static void CreatePaths()
         {
             if (!Directory.Exists(database))
             {
                 Directory.CreateDirectory(database);
             }
-            if (!Directory.Exists(workOrders))
+            if (!Directory.Exists(workorders))
             {
-                Directory.CreateDirectory(workOrders);
+                Directory.CreateDirectory(workorders);
             }
             if (!Directory.Exists(images))
             {
                 Directory.CreateDirectory(images);
             }
         }
+        
     }
 }

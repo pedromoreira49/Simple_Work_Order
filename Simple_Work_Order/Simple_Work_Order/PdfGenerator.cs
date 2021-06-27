@@ -14,7 +14,7 @@ namespace Simple_Work_Order
 {
     class PdfGenerator
     {
-        public static string works = Globais.workOrders;
+        public static string worksDir = Globais.workorders;
         public static string slogo = Globais.images;
 
         public static void Create(WorkOrders works)
@@ -27,7 +27,7 @@ namespace Simple_Work_Order
 
             string id = workID;
 
-            string path = $@"{works}" + $"WorkOrder{id}.pdf";
+            string path = $@"{worksDir}" + $"WorkOrder{id}.pdf";
 
             if (!File.Exists(path))
             {
@@ -37,9 +37,13 @@ namespace Simple_Work_Order
 
                 string s_img_logo = $@"{slogo}minha-logo.png";
                 Image img = Image.GetInstance(s_img_logo);
-                img.ScaleAbsolute(img);
+                img.ScaleAbsolute(130, 130);
                 img.Alignment = Element.ALIGN_CENTER;
                 doc.Add(img);
+
+                Paragraph space = new Paragraph();
+                space.Add("\n\n");
+                doc.Add(space);
 
                 PdfPTable table = new PdfPTable(2);
                 table.AddCell($"Client: {dt.Rows[0].Field<string>("Client")}");
@@ -48,12 +52,15 @@ namespace Simple_Work_Order
                 table.AddCell($"Work ID: {dt.Rows[0].Field<string>("WorkID")}");
 
                 doc.Add(table);
+                doc.Add(space);
 
                 Paragraph equip = new Paragraph();
                 equip.Font = new Font(Font.FontFamily.COURIER, 14);
                 equip.Alignment = Element.ALIGN_CENTER;
                 equip.Add($"\n\nEquipament: {dt.Rows[0].Field<string>("Equip")}");
                 doc.Add(equip);
+
+                doc.Add(space);
 
                 PdfPTable work = new PdfPTable(1);
                 work.AddCell("Work:");
@@ -89,6 +96,8 @@ namespace Simple_Work_Order
                 doc.Add(line);
                 doc.Add(assn);
 
+                doc.Close();
+                MessageBox.Show("Ordem de serviço criada com sucesso!");
             }
             else
             {

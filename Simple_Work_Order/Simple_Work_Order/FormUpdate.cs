@@ -73,7 +73,7 @@ namespace Simple_Work_Order
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            if (TextValid())
+            if (!TextValid())
             {
                 MessageBox.Show("Por favor, informe todos os campos necessários!");
                 txtBoxClient.Focus();
