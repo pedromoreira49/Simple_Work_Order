@@ -7,6 +7,8 @@ using Microsoft.VisualBasic;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using System.Data;
+using System.Windows.Forms;
 
 namespace Simple_Work_Order
 {
@@ -38,6 +40,59 @@ namespace Simple_Work_Order
                 img.ScaleAbsolute(img);
                 img.Alignment = Element.ALIGN_CENTER;
                 doc.Add(img);
+
+                PdfPTable table = new PdfPTable(2);
+                table.AddCell($"Client: {dt.Rows[0].Field<string>("Client")}");
+                table.AddCell($"Contact: {dt.Rows[0].Field<string>("Contact")}");
+                table.AddCell($"Date In: {dt.Rows[0].Field<string>("DateIn")}");
+                table.AddCell($"Work ID: {dt.Rows[0].Field<string>("WorkID")}");
+
+                doc.Add(table);
+
+                Paragraph equip = new Paragraph();
+                equip.Font = new Font(Font.FontFamily.COURIER, 14);
+                equip.Alignment = Element.ALIGN_CENTER;
+                equip.Add($"\n\nEquipament: {dt.Rows[0].Field<string>("Equip")}");
+                doc.Add(equip);
+
+                PdfPTable work = new PdfPTable(1);
+                work.AddCell("Work:");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+                work.AddCell("+");
+
+                doc.Add(work);
+
+                Paragraph price = new Paragraph();
+                price.Font = new Font(Font.FontFamily.COURIER, 14);
+                price.Alignment = Element.ALIGN_CENTER;
+                price.Add($"Price: {dt.Rows[0].Field<string>("Price")}");
+
+                doc.Add(price);
+
+                Paragraph line = new Paragraph();
+                string content = "\n\n___________________                                ___________________";
+                line.Add(content);
+
+                Paragraph assn = new Paragraph();
+                string content2 = "Ass. Cliente                                       Ass. Funcionário";
+                assn.Add(content2);
+
+                doc.Add(line);
+                doc.Add(assn);
+
+            }
+            else
+            {
+                MessageBox.Show("Ordem de serviço já foi impressa!");
             }
         }
     }
